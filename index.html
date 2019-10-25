@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mr&Mrs Talusan</title>
+
+    <link rel="stylesheet" href="American Typewriter Regular.ttf" />
+    <style type="text/css">
+        @font-face { 
+            font-family: american; 
+            src: url('American Typewriter Regular.ttf');
+        } 
+        html, body {
+            padding: 0px;
+            margin: 0px;
+            font-family: 'american';
+            padding-bottom: 10vh;
+        }
+
+        .header .image img {
+            width: 100vw;
+            z-index: -1;
+        }
+
+        .header .title {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            padding-top: 20vh;
+        }
+
+        .header .title p {
+            margin-bottom: 5px;
+            margin-top: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .header .title #surname{
+            margin-top: -30px;
+            margin-bottom: 15px;
+            font-size: 6em;
+            font-weight: 900;
+        }
+
+        .header .title #mr{
+            font-size: 4em;
+        }
+        .header .title #tie{
+            font-size: 2.5em;
+        }
+
+        .button button {
+            background-color: #fabe9c;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2em;
+            border-radius: 60px;
+            border: 0px;
+            padding: 20px 10vw;
+            color: white;
+        }
+
+        .button {
+            text-align: center;
+            width: 100vw;
+        }
+
+        .details {
+            padding-top: 10vh;
+        }
+
+        .details p {
+            font-size: 2em;
+            text-align: center;
+            margin: 0px;
+        }
+
+        .details #bold {
+            font-weight: 900;
+        }
+        
+        .details #list {
+            font-size: 2em;
+            margin-left: 25vh;
+            width: 50vh;
+        }
+
+        .yacht {
+            margin: 10vh auto;
+            width: 100vh;
+        }
+
+        .yacht image {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .calendar {
+            padding: 10vh 0px;
+        }
+    </style>
+
+</head>
+    <body>
+        <div class="header">
+            <div class="image">
+                <img src="background.png">
+            </div>
+
+            <div class="title">
+                <p id="mr">Mr&Mrs</p>
+                <p id="surname">Talusan</p>
+                <p id="tie">Tie the Knot Part II</p>
+                <div class="button">
+                    <button>RSVP</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="details">
+            <div class="where">
+                <p id="bold">Where:</p>
+                <p>Realship Yachts</p>
+                <p>CCP Complex Bay Terminal B Roxas Boulevard</p>
+            </div>
+
+            <div class="when">
+                <p id="bold">When:</p>
+                <p>November 29, 2019</p>
+                <p>4 - 7pm</p>
+
+                <div class="button calendar">
+                    <button>Add to Calendar</button>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <p id="bold">Reminders:</p>
+                <ul id="list">
+                    <li>Wear anything white</li>
+                    <li>Dinner buffet will be served</li>
+                    <li>We will stay on the yacht for 3 hours. Please check with your doctor if you are allowed to cruise.</li>
+                </ul>
+
+                <p id="bold">Yacht Actual Photos:</p>
+                <div class="yacht">
+                    <img src="yacht.png">
+                </div>
+
+                <p id="bold">For questions contact</p>
+                <p id="bold">Claudine at 0917 546 1259</p>
+            </div>
+        </div>
+    </body>
+</html>
