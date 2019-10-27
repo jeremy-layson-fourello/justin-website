@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Mr&Mrs Talusan</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
 
     <style type="text/css">
         @font-face { 
@@ -29,7 +33,7 @@
             top: 0px;
             left: 0px;
             width: 100vw;
-            padding-top: 20vh;
+            padding-top: 15vh;
         }
 
         .header .title p {
@@ -53,7 +57,24 @@
             font-size: 2.5em;
         }
 
+        .title .button {
+            margin-top: 10vh;
+        }
+
         .button button {
+            background-color: #fabe9c;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 2em;
+            border-radius: 60px;
+            border: 0px;
+            padding: 20px 10vw;
+            color: white;
+        }
+
+        .button a {
+            font-family: 'american';
+            text-decoration: none;
             background-color: #fabe9c;
             margin-left: auto;
             margin-right: auto;
@@ -85,22 +106,42 @@
         
         .details #list {
             font-size: 2em;
-            margin-left: 25vh;
-            width: 50vh;
+            margin-left: 15vw;
+            width: 70vw;
         }
 
         .yacht {
             margin: 10vh auto;
-            width: 100vh;
         }
 
-        .yacht image {
-            margin-left: auto;
-            margin-right: auto;
+        .yacht img {
+            width: 80vw;
+            margin-left: 10vw;
         }
 
         .calendar {
             padding: 10vh 0px;
+        }
+
+        .when {
+            padding-top: 15vh;
+        }
+
+        #slideshow {
+            width: 80vw;
+            margin-left: 10vw;
+            height: 100%; 
+            padding: 10px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+            margin-bottom: 10vh;
+            margin-top: 3vh;
+        }
+
+        #slideshow img {
+            width: 100%;
+        }
+
+        #slideshow > div {
         }
     </style>
 
@@ -110,35 +151,30 @@
             <div class="image">
                 <img src="background.png">
             </div>
-
             <div class="title">
                 <p id="mr">Mr&Mrs</p>
                 <p id="surname">Talusan</p>
                 <p id="tie">Tie the Knot Part II</p>
                 <div class="button">
-                    <button>RSVP</button>
+                    <a href="https://forms.gle/3pUjY8knKxvQenn58" target="_new">RSVP</a>
                 </div>
             </div>
-
         </div>
-
         <div class="details">
             <div class="where">
                 <p id="bold">Where:</p>
                 <p>Realship Yachts</p>
                 <p>CCP Complex Bay Terminal B Roxas Boulevard</p>
             </div>
-
             <div class="when">
                 <p id="bold">When:</p>
                 <p>November 29, 2019</p>
                 <p>4 - 7pm</p>
 
                 <div class="button calendar">
-                    <button>Add to Calendar</button>
+                    <a target="_new" href="http://www.google.com/calendar/event?action=TEMPLATE&text=Mr%26Mrs%20Talusan%3A%20Tie%20the%20Knot%20Part%20II&dates=20191129T160000/20191129T190000&details=Wear%20anything%20white%0ADinner%20buffet%20will%20be%20served%0AWe%20will%20stay%20on%20the%20yacht%20for%203%20hours.%20Please%20check%20with%20your%20doctor%20if%20you%20are%20allowed%20to%20cruise.&location=Realship%20Yachts%2C%20CCP%20Complex%20Bay%20Terminal%20B%20Roxas%20Boulevard">Add to Calendar</a>
                 </div>
             </div>
-
             <div class="reminders">
                 <p id="bold">Reminders:</p>
                 <ul id="list">
@@ -146,15 +182,35 @@
                     <li>Dinner buffet will be served</li>
                     <li>We will stay on the yacht for 3 hours. Please check with your doctor if you are allowed to cruise.</li>
                 </ul>
-
                 <p id="bold">Yacht Actual Photos:</p>
-                <div class="yacht">
+                <!-- <div class="yacht">
                     <img src="yacht.png">
-                </div>
+                </div> -->
 
+                <div id="slideshow">
+                   <div><img src="yacht.png"></div>
+                   <div><img src="yacht2.jpg"></div>
+                   <div><img src="yacht3.jpg"></div>
+                   <div><img src="yacht4.jpg"></div>
+                   <div><img src="yacht5.jpg"></div>
+                   <div><img src="yacht6.jpg"></div>
+                   <div><img src="yacht7.jpg"></div>
+                </div>
                 <p id="bold">For questions contact</p>
                 <p id="bold">Claudine at 0917 546 1259</p>
             </div>
         </div>
+
+        <script type="text/javascript">
+            $("#slideshow > div:gt(0)").hide();
+            setInterval(function() {
+              $('#slideshow > div:first')
+                .fadeOut(0)
+                .next()
+                .fadeIn(0)
+                .end()
+                .appendTo('#slideshow');
+            }, 3000);
+        </script>
     </body>
 </html>
