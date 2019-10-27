@@ -33,7 +33,7 @@
             top: 0px;
             left: 0px;
             width: 100vw;
-            padding-top: 15vh;
+            padding-top: 18vh;
         }
 
         .header .title p {
@@ -46,15 +46,16 @@
         .header .title #surname{
             margin-top: -30px;
             margin-bottom: 15px;
-            font-size: 6em;
+            font-size: 5em;
             font-family: 'american-bold';
         }
 
         .header .title #mr{
-            font-size: 4em;
+            font-size: 3.5em;
         }
+
         .header .title #tie{
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         .title .button {
@@ -143,6 +144,45 @@
 
         #slideshow > div {
         }
+
+
+
+        @media (orientation: portrait){
+            .header .title {
+                padding-top: 5vh;
+            }
+
+            .title .button {
+                margin-top: 4vh;
+            }
+
+            .details {
+                padding-top: 5vh;
+            }
+
+            .when {
+                padding-top: 5vh;
+            }
+
+            .calendar {
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+            }
+
+            #list {
+                padding-bottom: 3vh;
+            }
+
+            #slideshow {
+                margin-bottom: 5vh;
+            }
+
+
+            body {
+                padding-bottom: 5vh;
+                font-size: 1.5em;
+            }
+        }
     </style>
 
 </head>
@@ -181,6 +221,7 @@
                     <li>Wear anything white</li>
                     <li>Dinner buffet will be served</li>
                     <li>We will stay on the yacht for 3 hours. Please check with your doctor if you are allowed to cruise.</li>
+                    <li>Boarding time at 4:00 PM, departure at 4:30 PM</li>
                 </ul>
                 <p id="bold">Yacht Actual Photos:</p>
                 <!-- <div class="yacht">
@@ -196,8 +237,10 @@
                    <div><img src="yacht6.jpg"></div>
                    <div><img src="yacht7.jpg"></div>
                 </div>
-                <p id="bold">For questions contact</p>
-                <p id="bold">Claudine at 0917 546 1259</p>
+                <div class="questions">
+                    <p id="bold">For questions contact</p>
+                    <p id="bold">Claudine at 0917 546 1259</p>
+                </div>
             </div>
         </div>
 
